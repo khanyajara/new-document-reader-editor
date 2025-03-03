@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import './App.css'
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+    <DocumentEditorContainerComponent
+    className="container"
+    style={{ height: '1000px', width: '100%' }}
+    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+    enableToolbar={true}
+/>
+);
 }
-
 export default App;
